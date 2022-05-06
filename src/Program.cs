@@ -7,10 +7,10 @@ namespace passMangerCSharpV2 // Note: actual namespace depends on the project na
         static void Main(string[] args)
         {
             if (File.Exists("theFileOfDoom.txt")) {
-                application.run();
+                application.run(true);
             }
             else {
-                
+                application.run(false);
             }
         }
     }
