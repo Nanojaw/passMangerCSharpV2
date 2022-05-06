@@ -1,0 +1,15 @@
+/home/test/devStuff/passMangerCSharpV2.0/bin/Debug/net6.0/passMangerCSharpV2
+/home/test/devStuff/passMangerCSharpV2.0/bin/Debug/net6.0/passMangerCSharpV2.deps.json
+/home/test/devStuff/passMangerCSharpV2.0/bin/Debug/net6.0/passMangerCSharpV2.runtimeconfig.json
+/home/test/devStuff/passMangerCSharpV2.0/bin/Debug/net6.0/passMangerCSharpV2.dll
+/home/test/devStuff/passMangerCSharpV2.0/bin/Debug/net6.0/passMangerCSharpV2.pdb
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.csproj.AssemblyReference.cache
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.GeneratedMSBuildEditorConfig.editorconfig
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.AssemblyInfoInputs.cache
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.AssemblyInfo.cs
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.csproj.CoreCompileInputs.cache
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.dll
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/refint/passMangerCSharpV2.dll
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.pdb
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/passMangerCSharpV2.genruntimeconfig.cache
+/home/test/devStuff/passMangerCSharpV2.0/obj/Debug/net6.0/ref/passMangerCSharpV2.dll
