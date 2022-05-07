@@ -8,8 +8,8 @@ void application::run()
     std::cout <<
         "########################################################################\n"
         "#  Welcome to passManger, an application to help you manage passwords  #\n"
-        "#              Type help to se what options are available              #\n"
-        "########################################################################"
+        "#               Type H to se what options are available                #\n"
+        "########################################################################\n"
     << std::endl;
 
     bool running = true;
@@ -39,6 +39,20 @@ void application::run()
                 break;
             }
             default: ;
+        case 'H': 
+            {
+                std::cout << 
+                    "########################################################################\n"
+                    "#               Welcome to the help page for passManger!               #\n"
+                    "#     Below is a list of available options and their descriptions:     #\n"
+                    "# C : Create a new profile                                             #\n"
+                    "# L : Log in to existing profile                                       #\n"
+                    "# E : Save changes and exit the password manager                       #\n"
+                    "# H : Display this message                                             #\n"
+                    "########################################################################\n"
+                << std::endl;
+                break;
+            }   
         }
     }
 }
