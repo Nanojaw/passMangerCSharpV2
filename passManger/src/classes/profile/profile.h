@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include "../credential/credential.h"
+#include "../key/key.h"
 
 #include <string>
 #include <vector>
@@ -13,6 +14,8 @@ public:
     std::vector<std::pair<std::string, std::string>> extra_details;
     std::string master_password;
     std::vector<credential> credentials;
+
+    std::vector<key> keys;
 
     void create_profile();
     void save_profile();

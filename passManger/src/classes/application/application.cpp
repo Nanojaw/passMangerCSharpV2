@@ -23,13 +23,21 @@ void application::run()
         switch (std::toupper(option[0]))
         {
         case 'C':
-            user.create_profile();
-            break;
+            {
+                user.create_profile();
+                break;
+            }
         case 'L':
-            /*login()*/
+            {
+                login();
+                break;
+            }
         case 'E':
-            running = false;
-            /*save_profile();*/
+            {
+                running = false;
+                /*save_profile();*/
+                break;
+            }
             default: ;
         }
     }
