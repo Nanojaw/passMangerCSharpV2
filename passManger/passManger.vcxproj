@@ -123,12 +123,14 @@
   <ItemGroup>
     <ClInclude Include="src\include\application\application.h" />
     <ClInclude Include="src\include\credential\credential.h" />
+    <ClInclude Include="src\include\misc\misc.h" />
     <ClInclude Include="src\include\profile\profile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\source\application\application.cpp" />
     <ClCompile Include="src\source\credential\credential.cpp" />
     <ClCompile Include="src\source\main.cpp" />
+    <ClCompile Include="src\source\misc\misc.cpp" />
     <ClCompile Include="src\source\profile\profile.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
