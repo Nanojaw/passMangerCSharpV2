@@ -2,6 +2,9 @@
 /passManger/bin/**
 /passManger/obj/**
 /.vs/**
+/bin/**
+!/bin/premake5
+!/bin/premake5.exe
 
 /**/passManger.vcxproj
 /**/passManger.vcxproj.filters

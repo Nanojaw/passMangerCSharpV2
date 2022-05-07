@@ -15,7 +15,7 @@ project "passManger"
     language "C++"
     clr "On"
 
-    targetdir = ("bin/" .. outputdir .. "/%{prj.name}")
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objDir = ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files {
@@ -26,7 +26,7 @@ project "passManger"
     filter "system:windows"
         cppDialect = "C++23"
         staticRuntime = "On"
-        systemversion = "latest"
+        systemversion "latest"
 
     filter "configurations:Debug"
         defines "PM_DEBUG"

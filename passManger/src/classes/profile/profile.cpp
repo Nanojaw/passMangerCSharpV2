@@ -147,7 +147,7 @@ void profile::create_profile()
 
 void profile::save_profile()
 {
-    std::wstring file_path = misc::prompt_user(L"Enter path where the file is going to be saved");
+    std::wstring file_path = L""/*misc::prompt_user(L"Enter path where the file is going to be saved")*/;
 
     
 }
