@@ -29,7 +29,7 @@ void application::run()
             }
         case 'L':
             {
-                login();
+                /*login();*/
                 break;
             }
         case 'E':
