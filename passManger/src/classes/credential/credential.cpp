@@ -1,4 +1,4 @@
-﻿#include "../../include/credential/credential.h"
+﻿#include "credential.h"
 
 credential::credential(const std::string& n, const std::string& s, const std::string& u, const std::string& e, const std::string& p)
 {

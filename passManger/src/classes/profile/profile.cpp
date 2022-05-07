@@ -1,5 +1,5 @@
-﻿#include "../../include/profile/profile.h"
-#include  "../../include/misc/misc.h"
+﻿#include "profile.h"
+#include "../misc/misc.h"
 
 #include <iostream>
 
@@ -82,6 +82,4 @@ void profile::create_profile()
 void profile::save_profile()
 {
     std::string file_path = misc::prompt_user("Enter path where the file is going to be saved");
-
-    
 }

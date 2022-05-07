@@ -1,5 +1,5 @@
 #pragma once
-#include "../../include/profile/profile.h"
+#include "../profile/profile.h"
 
 class application
 {
