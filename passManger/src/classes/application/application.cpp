@@ -16,9 +16,9 @@ void application::run()
         
     while (running)
     {
-        std::string option;
+        std::wstring option;
 
-        std::getline(std::cin, option);
+        std::getline(std::wcin, option);
 
         switch (std::toupper(option[0]))
         {

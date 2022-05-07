@@ -9,10 +9,10 @@
 class profile
 {
 public:
-    std::string name;
-    std::string email;
-    std::vector<std::pair<std::string, std::string>> extra_details;
-    std::string master_password;
+    std::wstring name;
+    std::wstring email;
+    std::vector<std::pair<std::wstring, std::wstring>> extra_details;
+    std::wstring master_password;
     std::vector<credential> credentials;
 
     std::vector<key> keys;

@@ -4,12 +4,12 @@
 class credential
 {
 public:
-    std::string name;
-    std::string site;
+    std::wstring name;
+    std::wstring site;
     
-    std::string username;
-    std::string email;
-    std::string password;
+    std::wstring username;
+    std::wstring email;
+    std::wstring password;
 
-    credential(const std::string& n, const std::string& s, const std::string& u, const std::string& e, const std::string& p);
+    credential(const std::wstring& n, const std::wstring& s, const std::wstring& u, const std::wstring& e, const std::wstring& p);
 };
