@@ -4,18 +4,18 @@
 
 #include "../../libs/sha256.h"
 
-std::string misc::prompt_user(const std::string prompt)
+std::wstring misc::prompt_user(const std::wstring prompt)
 {
-    std::string answer;
+    std::wstring answer;
     
-    std::cout << prompt + ": ";
-    std::getline(std::cin, answer);
+    std::wcout << prompt + L": ";
+    std::getline(std::wcin, answer);
     std::cout << std::endl;
 
     return answer;
 }
 
-std::string misc::hash_masterpassword(const std::string& password)
+std::wstring misc::hash_masterpassword(const std::wstring& password)
 {
     return sha256(password);
 }
