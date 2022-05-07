@@ -2,7 +2,8 @@
 
 int main(int argc, char** argv)
 {
-  application app("profile.txt");
+  application app;
+  app.run();
   
   return 0;
 }
