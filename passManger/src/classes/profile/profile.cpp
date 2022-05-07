@@ -1,9 +1,15 @@
 ﻿#include "profile.h"
+
+#include <filesystem>
+#include <fstream>
+
 #include "../misc/misc.h"
 
 #include <iostream>
 
 int a = 0;
+
+
 
 void profile::create_profile()
 {
@@ -11,10 +17,8 @@ void profile::create_profile()
     {
         name = misc::prompt_user(L"Please fill out your full name");
         email = misc::prompt_user(L"Please fill out your preferred email");
-    
-        const std::wstring add_details = misc::prompt_user(L"Do you want to add any extra details about yourself? [Y]es, [N]o");
 
-        switch (std::toupper(add_details[0]))
+        switch (const std::wstring add_details = misc::prompt_user(L"Do you want to add any extra details about yourself? [Y]es, [N]o"); std::toupper(add_details[0]))
         {
         case 'Y':
             {
@@ -48,10 +52,8 @@ void profile::create_profile()
         }
 
         master_password = tmp_pass2;
-    
-        const std::wstring add_credentials = misc::prompt_user(L"Do you want to add any credentials? [Y]es, [N]o");
 
-        switch (std::toupper(add_credentials[0]))
+        switch (const std::wstring add_credentials = misc::prompt_user(L"Do you want to add any credentials? [Y]es, [N]o"); std::toupper(add_credentials[0]))
         {
         case 'Y':
             {
@@ -80,9 +82,7 @@ void profile::create_profile()
         default: ;
         }
 
-        const std::wstring add_keys = misc::prompt_user(L"Do you want to add any keys? [Y]es, [N]o");
-
-        switch (std::toupper(add_keys[0]))
+        switch (const std::wstring add_keys = misc::prompt_user(L"Do you want to add any keys? [Y]es, [N]o"); std::toupper(add_keys[0]))
         {
         case 'Y':
             {
@@ -147,11 +147,22 @@ void profile::create_profile()
 
 void profile::save_profile()
 {
-    std::wstring file_path = misc::prompt_user(L"Enter path where the file is going to be saved");
-
-    if (file_path.empty())
+    std::wstring file_path_str = misc::prompt_user(L"Enter path where the file is going to be saved");
+    
+    if (!file_path_str.empty())
     {
+        file_path_str += L"profileFile.txt";
+    }
+    else
+    {
+        file_path_str = (std::filesystem::current_path() / "profileFile.txt").wstring();
     }
 
+    std::wstring file_str;
+
     
+    
+    std::wfstream file(file_path_str);
+    
+    file << file_str;
 }
