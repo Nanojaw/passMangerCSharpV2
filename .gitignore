@@ -3,7 +3,8 @@
 /passManger/obj/**
 /.vs/**
 
-passManger.vcxproj
-passManger.vcxproj.filters
-passMangerCpp.sln
-Makefile
+/**/passManger.vcxproj
+/**/passManger.vcxproj.filters
+/**/passMangerCpp.sln
+/**/passManger/passManger.vcxproj.user
+/**/Makefile
