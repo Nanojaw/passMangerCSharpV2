@@ -16,7 +16,7 @@ project "passManger"
     clr "On"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objDir = ("bin-int/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files {
         "%{prj.name}/src/**.h",
@@ -24,8 +24,7 @@ project "passManger"
     }
 
     filter "system:windows"
-        cppDialect = "C++23"
-        staticRuntime = "On"
+        cppdialect "C++17"
         systemversion "latest"
 
     filter "configurations:Debug"

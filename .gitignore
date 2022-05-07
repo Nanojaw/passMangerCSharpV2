@@ -3,6 +3,7 @@
 /passManger/obj/**
 /.vs/**
 /bin/**
+/bin-int/**
 !/bin/premake5
 !/bin/premake5.exe
 
