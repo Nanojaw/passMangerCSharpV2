@@ -7,7 +7,7 @@ void profile::create_profile()
 {
     name = misc::prompt_user("Please fill out your full name");
     email = misc::prompt_user("Please fill out your preferred email");
-
+    
     const std::string add_details = misc::prompt_user("Do you want to add any extra details about yourself? [Y]es, [N]o");
 
     switch (std::toupper(add_details[0]))
@@ -44,7 +44,7 @@ void profile::create_profile()
     }
 
     master_password = tmp_pass2;
-
+    
     const std::string add_credentials = misc::prompt_user("Do you want to add any credentials? [Y]es, [N]o");
 
     switch (std::toupper(add_credentials[0]))
@@ -76,10 +76,41 @@ void profile::create_profile()
     default: ;
     }
 
+    const std::string add_keys = misc::prompt_user("Do you want to add any keys? [Y]es, [N]o");
+
+    switch (std::toupper(add_keys[0]))
+    {
+    case 'Y':
+        {
+            bool running = true;
+
+            while (running)
+            {
+                std::string key_name = misc::prompt_user("Enter the name of the key");
+                std::string url = misc::prompt_user("Enter the url that is using the key");
+
+                std::string key_str = misc::prompt_user("Enter the key");
+
+                keys.emplace_back(key_name, url, key_str);
+                
+                if (std::toupper(misc::prompt_user("More")[0]) == 'N') running = false;
+            }
+            break;
+        }
+
+    case 'N':
+        {
+            break;
+        }
+    default: ;
+    }
+    
     save_profile();
 }
 
 void profile::save_profile()
 {
     std::string file_path = misc::prompt_user("Enter path where the file is going to be saved");
+
+    
 }
