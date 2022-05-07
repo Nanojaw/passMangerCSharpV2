@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "../../libs/sha256.h"
+
 std::string misc::prompt_user(const std::string prompt)
 {
     std::string answer;
@@ -11,4 +13,9 @@ std::string misc::prompt_user(const std::string prompt)
     std::cout << std::endl;
 
     return answer;
+}
+
+std::string misc::hash_masterpassword(const std::string& password)
+{
+    return sha256(password);
 }

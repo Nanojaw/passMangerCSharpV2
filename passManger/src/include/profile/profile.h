@@ -15,4 +15,5 @@ public:
     std::vector<credential> credentials;
 
     void create_profile();
+    void save_profile();
 };
