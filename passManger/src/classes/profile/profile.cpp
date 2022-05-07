@@ -122,7 +122,25 @@ void profile::create_profile()
         std::pair<std::string, std::string>("f", "f")
     };
 
-    master_password = misc::hash_masterpassword("IsakIsBadLeL");
+    master_password = misc::hash_masterpassword("IsakIsBadLeLV2");
+
+    credentials = {
+        credential("test", "test_site", "test_username", "test_email", "test_password"),
+        credential("test1", "test_site1", "test_username1", "test_email1", "test_password1"),
+        credential("test2", "test_site2", "test_username2", "test_email2", "test_password2"),
+        credential("test3", "test_site3", "test_username3", "test_email3", "test_password3"),
+        credential("test4", "test_site4", "test_username4", "test_email4", "test_password4"),
+        credential("test5", "test_site5", "test_username5", "test_email5", "test_password5")
+    };
+
+    keys = {
+        key("test", "test_site", "test_key"),
+        key("test1", "test_site1", "test_key1"),
+        key("test2", "test_site2", "test_key2"),
+        key("test3", "test_site3", "test_key3"),
+        key("test4", "test_site4", "test_key4"),
+        key("test5", "test_site5", "test_key5")
+    };
     
     save_profile();
 }
