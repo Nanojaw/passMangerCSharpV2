@@ -1,4 +1,4 @@
-#include "../include/application.h"
+#include "../include/application/application.h"
 
 int main(int argc, char** argv)
 {

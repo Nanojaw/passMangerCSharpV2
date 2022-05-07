@@ -4,16 +4,25 @@
     <Filter Include="include">
       <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\application">
+      <UniqueIdentifier>{EC28E57C-588A-C28A-E1F7-083D4D58F949}</UniqueIdentifier>
+    </Filter>
     <Filter Include="source">
       <UniqueIdentifier>{76FF3A1C-62A1-65F2-4B5C-7946379DEC42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\application">
+      <UniqueIdentifier>{59C4D3EF-45A8-9445-AE08-8F989A0B7FC7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\include\application.h">
-      <Filter>include</Filter>
+    <ClInclude Include="src\include\application\application.h">
+      <Filter>include\application</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\source\application\application.cpp">
+      <Filter>source\application</Filter>
+    </ClCompile>
     <ClCompile Include="src\source\main.cpp">
       <Filter>source</Filter>
     </ClCompile>
