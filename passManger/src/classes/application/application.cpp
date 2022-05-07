@@ -35,7 +35,7 @@ void application::run()
         case 'E':
             {
                 running = false;
-                /*save_profile();*/
+                user.save_profile();
                 break;
             }
             default: ;

@@ -18,9 +18,9 @@ std::string misc::prompt_user(const std::string prompt)
     return answer;
 }
 
-std::string misc::hash_masterpassword(const std::string& password)
+std::string misc::hash_masterpassword(const std::wstring& password)
 {
-    return sha256(password);
+    
 }
 
 std::vector<int> misc::get_encryption_key(const std::string& password)
