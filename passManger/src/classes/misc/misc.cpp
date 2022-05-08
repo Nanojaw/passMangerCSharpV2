@@ -52,11 +52,11 @@ std::vector<int> misc::get_encryption_key(const std::string& password)
 {
     // Create base randomizer
     std::default_random_engine baseGen (password.length());
-    std::uniform_int_distribution<char> baseDist (16, 32);
+    std::uniform_int_distribution<int> baseDist (16, 32);
 
     // Create index randomizer
     std::default_random_engine indexGen (password.length());
-    std::uniform_int_distribution<char> indexDist (0, password.length() - 1);
+    std::uniform_int_distribution<int> indexDist (0, password.length() - 1);
 
     int length = baseDist(baseGen);
 
