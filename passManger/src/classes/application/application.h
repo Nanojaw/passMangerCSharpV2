@@ -6,4 +6,5 @@ class application
 public:
     profile user;
     void run();
+    void login();
 };

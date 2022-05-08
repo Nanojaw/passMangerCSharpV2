@@ -5,11 +5,9 @@
 
 #include "../misc/misc.h"
 
-#include <iostream>
+#include "../enc_dec/enc_dec.h"
 
 int a = 0;
-
-
 
 void profile::create_profile()
 {
@@ -145,7 +143,23 @@ void profile::create_profile()
     save_profile();
 }
 
-void profile::save_profile()
+void profile::save_profile() const
 {
+    const auto file_path = std::filesystem::current_path() / "profileFile.txt";
     
+    std::wofstream file(file_path);
+
+    const std::wstring personal_info_string = misc::construct_pi(*this);
+    const std::wstring credentials_string = misc::construct_cs(*this);
+    const std::wstring keys_string = misc::construct_ks(*this);
+
+    std::wstring file_str = personal_info_string + L"\n" + credentials_string + keys_string;
+
+    auto enc_dec_key = misc::get_encryption_key(master_password);
+
+    encrypter_decrypter::encrypt_string(file_str, enc_dec_key);
+    
+    file << file_str;
+    
+    file.close();
 }

@@ -19,7 +19,8 @@ project "passManger"
 
     files {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "hashingLib/src/**.h"
     }
 
     filter "system:windows"

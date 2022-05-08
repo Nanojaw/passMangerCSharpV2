@@ -1,5 +1,7 @@
 ﻿#include "application.h"
 
+#include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <string>
 
@@ -29,7 +31,8 @@ void application::run()
             }
         case 'L':
             {
-                /*login();*/
+                user.create_profile();
+                login();
                 break;
             }
         case 'E':
@@ -38,7 +41,6 @@ void application::run()
                 user.save_profile();
                 break;
             }
-            default: ;
         case 'H': 
             {
                 std::cout << 
@@ -53,6 +55,52 @@ void application::run()
                 << std::endl;
                 break;
             }   
+            default: ;
         }
+    }
+}
+
+void application::login()
+{
+    auto file = std::wifstream(std::filesystem::current_path() / "profileFile.txt");
+
+    std::wstring line;
+    std::vector<std::wstring> lines;
+    
+    while (std::getline(file, line)) lines.push_back(line);
+
+    file.close();
+    
+    // Start of parser
+
+    user.name = lines[1].substr(9);
+    user.email = lines[2].substr(10);
+
+    int index = 5;
+    while (!lines[index].empty())
+    {
+        auto trimmed_string = lines[index].substr(14);
+        
+        user.extra_details.emplace_back(trimmed_string.substr(0, trimmed_string.length() - trimmed_string.find(':') - 2), trimmed_string.substr(trimmed_string.find(':') + 2));
+        
+        index++;
+    }
+
+    index++;
+    index++;
+
+    user.master_password = lines[index].substr(7);
+
+    index++;
+    index++;
+    index++;
+
+    while (!lines[index].empty())
+    {
+        auto trimmed_string = lines[index].substr(7);
+
+        std::wcout << lines[index];
+        
+        index++;
     }
 }

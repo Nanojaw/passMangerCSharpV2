@@ -23,7 +23,7 @@ void removeOne(std::wstring& str)
 
 void encrypter_decrypter::encrypt_string(std::wstring& str, const std::vector<int>& key)
 {
-    for (auto i : key)
+    for (const auto i : key)
     {
         switch (i)
         {
