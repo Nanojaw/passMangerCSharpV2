@@ -27,6 +27,9 @@ project "passManger"
         cppdialect "C++17"
         systemversion "latest"
 
+    filter "system:linux"
+        cppdialect "C++17"
+
     filter "configurations:Debug"
         defines "PM_DEBUG"
         symbols "On"

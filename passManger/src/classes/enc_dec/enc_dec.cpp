@@ -1,5 +1,7 @@
 ﻿#include "enc_dec.h"
 
+#include <algorithm>
+
 #pragma region enc_funcs
 
 void addOne(std::wstring& str )
