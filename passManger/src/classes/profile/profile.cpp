@@ -147,22 +147,5 @@ void profile::create_profile()
 
 void profile::save_profile()
 {
-    std::wstring file_path_str = misc::prompt_user(L"Enter path where the file is going to be saved");
     
-    if (!file_path_str.empty())
-    {
-        file_path_str += L"profileFile.txt";
-    }
-    else
-    {
-        file_path_str = (std::filesystem::current_path() / "profileFile.txt").wstring();
-    }
-
-    std::wstring file_str;
-
-    
-    
-    std::wfstream file(file_path_str);
-    
-    file << file_str;
 }

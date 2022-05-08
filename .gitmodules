@@ -1,0 +1,3 @@
+[submodule "hasingLib"]
+	path = hasingLib
+	url = https://github.com/Chocobo1/Hash

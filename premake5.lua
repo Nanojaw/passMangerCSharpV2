@@ -13,7 +13,6 @@ project "passManger"
     location "passManger"
     kind "ConsoleApp"
     language "C++"
-    clr "On"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
