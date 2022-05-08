@@ -29,6 +29,7 @@ void application::run()
         case 'C':
             {
                 user.create_profile();
+                user_exists = true;
                 break;
             }
         case 'L':
@@ -39,7 +40,10 @@ void application::run()
         case 'E':
             {
                 running = false;
+                if (user_exists)
+                {
                 user.save_profile();
+                }
                 break;
             }
         case 'H': 
@@ -109,4 +113,6 @@ void application::login()
     {
         misc::add_key_to_list(user.keys, lines, index);
     }
+
+    user_exists = true;
 }

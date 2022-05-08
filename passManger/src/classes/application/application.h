@@ -5,6 +5,7 @@ class application
 {
 public:
     profile user;
+    bool user_exists = false;
     void run();
     void login();
 };
