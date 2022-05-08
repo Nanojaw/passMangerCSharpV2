@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+#include "../misc/misc.h"
+
 void application::run()
 {
     std::cout <<
@@ -31,7 +33,6 @@ void application::run()
             }
         case 'L':
             {
-                user.create_profile();
                 login();
                 break;
             }
@@ -64,10 +65,12 @@ void application::login()
 {
     auto file = std::wifstream(std::filesystem::current_path() / "profileFile.txt");
 
+    // Make password checker
+    
     std::wstring line;
     std::vector<std::wstring> lines;
     
-    while (std::getline(file, line)) lines.push_back(line);
+    while (std::getline(file, line)) /*Decrypt text*/lines.push_back(line);
 
     file.close();
     
@@ -95,12 +98,15 @@ void application::login()
     index++;
     index++;
 
+    while (lines[index] != L"# Region Keys #")
+    {
+        misc::add_cred_to_list(user.credentials, lines, index);
+    }
+
+    index++;
+    
     while (!lines[index].empty())
     {
-        auto trimmed_string = lines[index].substr(7);
-
-        std::wcout << lines[index];
-        
-        index++;
+        misc::add_key_to_list(user.keys, lines, index);
     }
 }

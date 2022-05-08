@@ -11,6 +11,29 @@
 
 constexpr int encryptor_size = 16;
 
+void misc::add_cred_to_list(std::vector<credential>& creds, std::vector<std::wstring>& lines, int& index)
+{
+    index++;
+    std::wstring name = lines[index].substr(13);
+
+    index++;
+    std::wstring site = lines[index].substr(13);
+
+    index++;
+    std::wstring username = lines[index].substr(17);
+
+    index++;
+    std::wstring email = lines[index].substr(14);
+
+    index++;
+    std::wstring password = lines[index].substr(17);
+
+    creds.emplace_back(name, site, username, email, password);
+
+    index++;
+    index++;
+}
+
 std::wstring misc::prompt_user(const std::wstring& prompt)
 {
     std::wstring answer;
@@ -129,4 +152,21 @@ std::wstring misc::construct_ks(const profile& user)
     result.resize(result.length() - 1);
     
     return result;
+}
+
+void misc::add_key_to_list(std::vector<key>& keys, std::vector<std::wstring>& lines, int& index)
+{
+    index++;
+    std::wstring name = lines[index].substr(13);
+
+    index++;
+    std::wstring site = lines[index].substr(13);
+
+    index++;
+    std::wstring key = lines[index].substr(12);
+
+    keys.emplace_back(name, site, key);
+    
+    index++;
+    index++;
 }

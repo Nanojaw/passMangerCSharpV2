@@ -153,7 +153,7 @@ void profile::save_profile() const
     const std::wstring credentials_string = misc::construct_cs(*this);
     const std::wstring keys_string = misc::construct_ks(*this);
 
-    std::wstring file_str = personal_info_string + L"\n" + credentials_string + keys_string;
+    std::wstring file_str = personal_info_string + L"\n" + credentials_string + keys_string + L"\n\n";
 
     auto enc_dec_key = misc::get_encryption_key(master_password);
 
