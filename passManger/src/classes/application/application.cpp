@@ -69,6 +69,7 @@ void application::login()
 {
     auto file = std::wifstream(std::filesystem::current_path() / "profileFile.txt");
 
+    std::wstring entered_password = misc::prompt_user(L"Enter your password);
     // Make password checker
     
     std::wstring line;
